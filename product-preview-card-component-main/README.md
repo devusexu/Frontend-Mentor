@@ -67,6 +67,7 @@ wat the hail, it takes so long!
 4. use new elements for RWD image
     - figure
     - picture
+5. almost forgot I use ```transition: all .2s ease-out;``` , it happens when property changes. Cool!
 
 
 
