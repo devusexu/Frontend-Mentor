@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://github.com/devusexu/Frontend-Mentor/tree/main/3-column-preview-card-component-main)
+- [Live Site URL](https://devusexu.github.io/Frontend-Mentor/3-column-preview-card-component-main/)
 
 ## My process
 
