@@ -1,0 +1,168 @@
+/* || Base style */
+
+:root {
+  --sedan-color: hsl(31, 77%, 52%);
+  --suv-color: hsl(184, 100%, 22%);
+  --lux-color: hsl(179, 100%, 13%);
+  --light-gray: hsl(0, 0%, 95%);
+  --trans-white: hsla(0, 0%, 100%, 0.75);
+}
+
+/* || Fonts and Colors */
+
+* {
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+/* I don't need smaller headings */
+h1,
+h2 { 
+  font-family: 'Big Shoulders Display', cursive;
+  color: var(--light-gray);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 0.9rem;
+  color: var(--trans-white);
+}
+
+section.sedan {
+  background-color: var(--sedan-color);
+}
+
+section.suv {
+  background-color: var(--suv-color);
+}
+
+section.lux {
+  background-color: var(--lux-color);
+}
+
+body {
+  background-color: var(--light-gray);
+}
+
+button {
+  background-color: var(--light-gray);
+}
+
+button.sedan {
+  color: var(--sedan-color);
+}
+
+button.suv {
+  color: var(--suv-color);
+}
+
+button.lux {
+  color: var(--lux-color);
+}
+
+/* || Button styles */
+button {
+  max-width: 9rem;
+  border-radius: 2rem;
+  border: 0;
+  margin-bottom: 1rem;
+  padding: 0.7rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button.sedan:hover,
+button.sedan:focus {
+  color: white;
+  background-color: var(--sedan-color);
+}
+
+button.suv:hover,
+button.suv:focus {
+  color: white;
+  background-color: var(--suv-color);
+}
+
+button.lux:hover,
+button.lux:focus {
+  color: white;
+  background-color: var(--lux-color);
+}
+
+
+/* || Layout */
+
+/* composition class from Andy Bell (might use em so that headings have bigger margin)
+https://cube.fyi/composition.html#flow-and-rhythm */
+.flow > * + * {
+  margin-top: var(--flow-space, 1.5rem);
+}
+
+/* mobile first (one column) */
+body {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin-block: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 18rem; 
+  padding: 2rem;
+}
+
+img {
+  /* default: stretch */
+  align-self: flex-start; 
+}
+
+section:first-child {
+  border-radius: 0.5em 0.5em 0 0;
+}
+
+section:last-child {
+  border-radius: 0 0 0.5em 0.5em;
+}
+
+/* Desktop */
+@media (min-width: 55rem) {
+  main {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  /*
+    1. constraint the height
+    2. change justify-content so that the gap won't be so wide
+    3. adjust padding and margin-top of bottom
+  */
+  .card {
+    justify-content: start;
+    max-height: 30rem;
+    padding: 3rem;
+  }
+
+  .flow button {
+    --flow-space: 6rem;
+  }
+
+  section:first-child {
+    border-radius: 0.5em 0 0 0.5em;
+  }
+  
+  section:last-child {
+    border-radius: 0 0.5em 0.5em 0;
+  }
+}
+
