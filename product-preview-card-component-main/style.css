@@ -37,10 +37,6 @@ body {
   letter-spacing: 0.4em;
 }
 
-.original {
-  text-decoration: line-through;
-}
-
 button {
   font-weight: 700;
 }
@@ -56,7 +52,7 @@ h1 {
   color: var(--heading-color);
 }
 
-figcaption {
+.info {
   background-color: var(--caption-bg-color);
 }
 
@@ -77,10 +73,19 @@ body {
   align-items: center;
 }
 
-figure {
+main {
   max-width: 20rem;
+}
+
+figure {
   display: flex;
   flex-direction: column;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 figcaption {
@@ -110,7 +115,7 @@ main {
   border-radius: 10px;
 }
 
-figcaption {
+.info {
   padding: 1.5rem;
 }
 
@@ -132,9 +137,11 @@ button:active {
 
 /* Desktop */
 @media (min-width: 50rem) {
-  figure {
-    max-height: 30rem;
+  main {
     max-width: 35rem;
+  }
+
+  figure {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }

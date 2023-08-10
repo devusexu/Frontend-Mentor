@@ -69,6 +69,13 @@ wat the hail, it takes so long!
     - picture
 5. almost forgot I use ```transition: all .2s ease-out;``` , it happens when property changes. Cool!
 
+> Below knowledge thanks for kind @adityaphasu
+6. use ```del``` instead of CSS for deleted contents
+7. no ```div``` in ```button```
+8. caption need not have too much info but describing the main contents (e.g. the picture) => I put button outside of caption, wondering that if I need to put it outside of the figure too.
+
+
+
 
 
 ### Continued development
@@ -82,3 +89,6 @@ wat the hail, it takes so long!
 ### Useful resources
 
 - [Accessible color palette generator](https://venngage.com/tools/accessible-color-palette-generator) - accessible palette to pick colors
+
+## Acknowledgments
+Thanks @adityaphasu for his/her generous suggestion on my every question.
