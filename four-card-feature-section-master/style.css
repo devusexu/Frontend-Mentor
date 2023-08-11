@@ -18,15 +18,20 @@ body {
 }
 
 h1 {
-  font-size: 1.5rem;
-}
-
-h1 div{
+  font-size: 1.55rem;
   font-weight: 200;
 }
 
+h1 strong{
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
 .card p {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
 }
 
 /* colors */
@@ -55,7 +60,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  max-width: 20rem;
+  max-width: 19.5rem;
 }
 
 article {
@@ -86,7 +91,7 @@ article {
 img {
   /* align-self: stretch(default) => causing the img same width as parent*/
   align-self: flex-end;
-  margin-block-start: 2rem;
+  margin-block-start: 1.5rem;
 }
 
 .card {
@@ -94,6 +99,7 @@ img {
   box-shadow: 0 10px 10px #d7dae4;
   padding: 1.75rem;
   border-radius: 5px;
+  gap: 0.5rem;
 }
 
 .supervisor {
@@ -119,7 +125,12 @@ img {
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
+    line-height: 1.4;
+  }
+
+  p {
+    line-height: 1.7;
   }
 
   article {
@@ -131,7 +142,7 @@ img {
         grid-template-columns: repeat(3, 1fr);
       each fr would then take the same width
     */
-    grid-template-columns: repeat(3, 20rem);
+    grid-template-columns: repeat(3, 21.5rem);
     grid-template-areas: 
       ". team-builder ."
       "supervisor team-builder calculator"
