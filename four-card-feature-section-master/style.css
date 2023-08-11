@@ -1,0 +1,165 @@
+/* || Colors and fonts */
+:root {
+  /* primary */
+  --red: hsl(0, 78%, 62%);
+  --cyan: hsl(180, 62%, 55%);
+  --orange: hsl(34, 97%, 64%);
+  --blue: hsl(212, 86%, 64%);
+  /* neutral */
+  --very-dark-blue: hsl(234, 12%, 34%);
+  --grayish-blue: hsl(229, 6%, 66%);
+  --very-light-gray: hsl(0, 0%, 98%);
+}
+
+/* fonts */
+body {
+  font-size: 0.9375rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h1 div{
+  font-weight: 200;
+}
+
+.card p {
+  font-size: 0.85rem;
+}
+
+/* colors */
+body {
+  color: var(--grayish-blue);
+  background-color: var(--very-light-gray);
+}
+
+header {
+  color: var(--very-dark-blue);
+}
+
+.card {
+  background-color: white;
+}
+
+/* || Layout */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 20rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* components */
+main {
+  /* associated with writing mode, here block direction means top & down */
+  margin-block: 5rem;
+}
+
+.description {
+  text-align: center;
+}
+
+article {
+  margin-block-start: 3rem;
+}
+
+img {
+  /* align-self: stretch(default) => causing the img same width as parent*/
+  align-self: flex-end;
+  margin-block-start: 2rem;
+}
+
+.card {
+  /* big blur so that it surrounds the box, y offset to make bottom shadow heavier */
+  box-shadow: 0 10px 10px #d7dae4;
+  padding: 1.75rem;
+  border-radius: 5px;
+}
+
+.supervisor {
+  border-block-start: 3px solid var(--cyan);
+}
+
+.team-builder {
+  border-block-start: 3px solid var(--red);
+}
+
+.karma {
+  border-block-start: 3px solid var(--orange);
+}
+
+.calculator {
+  border-block-start: 3px solid var(--blue);
+}
+
+/* Desktop */
+@media (min-width: 50rem) {
+  main {
+    max-width: 32rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+
+  article {
+    display: grid;
+    /* 
+      fr won't take equal spaces; big explicit width can solve this issue
+      like using 
+        width: 80rem;  
+        grid-template-columns: repeat(3, 1fr);
+      each fr would then take the same width
+    */
+    grid-template-columns: repeat(3, 20rem);
+    grid-template-areas: 
+      ". team-builder ."
+      "supervisor team-builder calculator"
+      "supervisor karma calculator"
+      ". karma ."
+    ;
+  }
+
+  .supervisor {
+    grid-area: supervisor;
+  }
+
+  .team-builder {
+    grid-area: team-builder;
+  }
+
+  .karma {
+    grid-area: karma;
+  }
+
+  .calculator {
+    grid-area: calculator;
+  }
+}
+
+
+
+
+
+
+
