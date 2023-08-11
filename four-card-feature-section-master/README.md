@@ -56,26 +56,6 @@ The three cards will just use auto instead, which is the minimum width for the h
 For example I changed `Team Builder` to `TeamBuilder`, it took more space than supervisor now since all characters of a word needs to be on the same line.  
 I also calculate the width of each card, they're all the width of the header plus left and right paddings, which means there are no extra spaces.
 
-```css
-  article {
-    display: grid;
-    /* 
-      fr won't take equal spaces; big explicit width can solve this issue
-      like using 
-        width: 80rem;  
-        grid-template-columns: repeat(3, 1fr);
-      each fr would then take the same width
-    */
-    grid-template-columns: repeat(3, 20rem);
-    grid-template-areas: 
-      ". team-builder ."
-      "supervisor team-builder calculator"
-      "supervisor karma calculator"
-      ". karma ."
-    ;
-  }
-```
-
 ### Useful resources
 
 - [Equal width columns in CSS Grid](https://stackoverflow.com/questions/47601564/equal-width-columns-in-css-grid) - This helped me understanding fr unit in grid
