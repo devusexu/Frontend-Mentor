@@ -1,0 +1,269 @@
+/* || colors and fonts */
+:root {
+  /* primary */
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  /* neutral */
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  /* gradient */
+  --bg-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --button-bg-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+/* colors */
+body {
+  background: var(--bg-gradient);
+  color: var(--desaturated-red);
+}
+
+button {
+  background: var(--button-bg-gradient);
+}
+
+h1 span {
+  color: var(--dark-grayish-red);
+}
+
+input {
+  color: var(--desaturated-red);
+  background-color: hsla(0, 100%, 98%, 0.5);
+}
+
+.errorMsg {
+  color: var(--soft-red);
+}
+
+/* fonts */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.3em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h1 span {
+  font-weight: 600;
+}
+
+.errorMsg {
+  font-size: 0.9rem;
+  text-align: start;
+}
+
+/* || layout */
+body {
+  max-width: 23.4375rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+.logo {
+  align-self: flex-start;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+}
+
+/* components */
+.logo img{
+  width: 6rem;
+  margin-inline-start: 1.8rem;
+  margin-block-start: 1.6rem;
+}
+
+body {
+  margin-inline: auto;
+}
+
+picture {
+  margin-block-end: 2.2rem;
+}
+
+p {
+  width: 85%;
+  margin-block-end: 1.3rem;
+}
+
+form,
+input {
+  width: 90%;
+}
+
+input {
+  border: 1px solid hsla(0, 36%, 70%, 0.5);
+  border-radius: 2rem;
+  padding: 0.8rem 1.7rem;
+}
+
+input:hover,
+input:focus {
+  outline: 3px dashed var(--desaturated-red);
+  border: 0;
+}
+
+form {
+  /* To use position: absolute for button & error components */
+  position: relative;
+}
+
+/* button style */
+button {
+  width: 4rem;
+  height: 3rem;
+  padding: 1rem;
+
+  position: absolute;
+  right: 0.5rem;
+
+  border: 0;
+  border-radius: 2rem;
+  box-shadow: 0 15px 10px 3px hsla(0, 36%, 70%, 0.25);
+}
+
+button:hover,
+button:focus {
+  background: #fad0d0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 3px dashed var(--desaturated-red);
+}
+
+button img {
+  margin-inline: auto;
+}
+
+/* error span: message & icon  */
+.errorMsg {
+  display: block;
+  margin: 0.5rem 0 0 2.8rem;
+}
+
+.errorIcon {
+  position: absolute;
+  right: 6rem;
+  top: 0.8rem;
+}
+
+.errorIcon {
+  /* It's fine for a11y because this icon is not important for screen readers */
+  visibility: hidden;
+}
+
+/* desktop */
+@media (min-width: 40rem) {
+  body {
+    max-width: unset;
+    display: grid;
+    /* 610px is the width of the hero image */
+    grid-template-columns: 1fr 610px;
+    grid-template-rows: 10rem 1fr;
+    grid-template-areas: 
+      "logo hero"
+      "main hero"
+    ;
+  }
+
+  .logo {
+    grid-area: logo;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  picture {
+    grid-area: hero;
+  }
+
+  
+  body {
+    font-size: 1rem;
+    background: url("images/bg-pattern-desktop.svg"), var(--bg-gradient);
+  }
+
+  picture {
+    margin: unset;
+  }
+
+  .logo img{
+    width: 10rem;
+    margin-inline-start: 10.25rem;
+    margin-block-start: 4.05rem;
+  }
+
+  main {
+    max-width: 27rem;
+    margin-inline: 10.26rem;
+    margin-block-start: 2.5rem;
+    align-self: flex-start;
+    text-align: start;
+    gap: 1.4rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.07;
+  }
+
+  p {
+    line-height: 1.7;
+    width: unset;
+    margin-block-end: 1.15rem;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  input {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  button {
+    width: 6rem;
+    height: 3.8rem;
+
+    top: -0.15rem;
+    right: -1rem;
+  }
+
+  .errorMsg {
+    margin-inline-start: 2rem;
+  }
+}
+
+/* too wide, adjust the layout to be 1.2:1 */
+@media (min-width: 91rem) {
+  body {
+    grid-template-columns: 1.2fr minmax(610px, 1fr);
+  }
+
+  picture {
+    align-self: center;
+  }
+
+  .logo {
+    align-self: center;
+  }
+
+}
