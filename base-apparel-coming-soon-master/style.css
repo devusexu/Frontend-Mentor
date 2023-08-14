@@ -29,6 +29,11 @@ input {
   background-color: hsla(0, 100%, 98%, 0.5);
 }
 
+input::placeholder {
+  color: var(--desaturated-red);
+  opacity: 0.5;
+}
+
 .errorMsg {
   color: var(--soft-red);
 }

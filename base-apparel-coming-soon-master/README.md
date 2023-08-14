@@ -61,7 +61,9 @@ Although I'm still not happy with the results, I do learned something through th
     - When you fix this margin,  other element you just adjusted move
     - When you adjust the line-height, find out it's actually about the font-size
 4. Be careful about using `outline: none` and `visibility: hidden`. The former causes issue for keyboard users and the latter causes issue for screen readers. In this challenge I use the latter for the error icon so I think it's fine.
-
+5. Style the color of `input` would style placeholder too in FireFox, but not in Chrome. The placeholder of FireFox has default opacity, but not in Chrome
+  => Add `input::placeholder` to style `color` and `opacity`, making the page look the same in both browsers.
+    > Check the result using different browsers while developing next time.
 
 Despite it's simple, I finally write some js.  
 I wish I could write tons in the future.
