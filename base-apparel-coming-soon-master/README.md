@@ -64,6 +64,7 @@ Although I'm still not happy with the results, I do learned something through th
 5. Style the color of `input` would style placeholder too in FireFox, but not in Chrome. The placeholder of FireFox has default opacity, but not in Chrome
   => Add `input::placeholder` to style `color` and `opacity`, making the page look the same in both browsers.
     > Check the result using different browsers while developing next time.
+6. Screen reader users would just get an input and a button without context, so I add `aria-label` to both of them. Might also use text in button or use `label` /`aria-labelledby` to both of them.
 
 Despite it's simple, I finally write some js.  
 I wish I could write tons in the future.
