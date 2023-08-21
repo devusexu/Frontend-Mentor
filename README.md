@@ -8,6 +8,8 @@
 | HTML, CSS | Four card feature section |[live](https://devusexu.github.io/Frontend-Mentor/four-card-feature-section-master/)|[code](https://github.com/devusexu/Frontend-Mentor/tree/main/four-card-feature-section-master)|
 | HTML, CSS, JavaScript | BASE APPAREL comimg soon page |[live](https://devusexu.github.io/Frontend-Mentor/base-apparel-coming-soon-master/)|[code](https://github.com/devusexu/Frontend-Mentor/tree/main/base-apparel-coming-soon-master)|
 | HTML, CSS, JavaScript | Intro component with sign-up form |[live](https://devusexu.github.io/Frontend-Mentor/intro-component-with-signup-form-master/)|[code](https://github.com/devusexu/Frontend-Mentor/tree/main/intro-component-with-signup-form-master)|
+| HTML, CSS, JavaScript | Interactive rating component |[live](https://devusexu.github.io/Frontend-Mentor/interactive-rating-component-main/)|[code](https://github.com/devusexu/Frontend-Mentor/tree/main/interactive-rating-component-main)|
+
 
 
 
