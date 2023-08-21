@@ -35,10 +35,6 @@ input[type="radio"] {
   appearance: none;
 }
 
-input::before {
-  display: none;
-}
-
 body {
   background-color: var(--Very-Dark-Blue);
   color: var(--White);
