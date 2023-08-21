@@ -58,23 +58,26 @@ Firefox(see the blue dot):
 ![](./images/input-focus-Firefox.png)
 
 Other learning:
+1. `aria-live` should be used at the parent of the `display: none` element to be read out by screen reader. Check [Testing ARIA-LIVE
+with display:none and innerHTML](https://www.davidmacd.com/blog/test-aria-live-display-none.html)
+2. Screen reader do read out "how did we do? radio button 5 checked" when an option is checked, but also other things like "grouping" for `fieldset`, "list" for `li` are being read out too.
 1. Tab into radio group then check different option using arrow keys
 2. Using SASS might improve developer experience with the nesting feature, because I wrote CSS like this
-```css
-  .thank-you img {
-    ...
-  }
+    ```css
+      .thank-you img {
+        ...
+      }
 
-  .thank-you h2 {
-    ...
-  }
+      .thank-you h2 {
+        ...
+      }
 
-  .thank-you p {
-    ...
-  }         
+      .thank-you p {
+        ...
+      }         
 
-```
-3. Don't focus on pixel perfection with gap/padding/margin too much, focus on the implementation and learning
+    ```
+1. Don't focus on pixel perfection with gap/padding/margin too much, focus on the implementation and learning
 
 
 ### Continued development
