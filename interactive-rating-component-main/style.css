@@ -33,6 +33,7 @@ fieldset {
 
 input[type="radio"] {
   appearance: none;
+  outline: none;
 }
 
 body {

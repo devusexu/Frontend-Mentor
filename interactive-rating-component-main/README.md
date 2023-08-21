@@ -49,7 +49,8 @@ Users should be able to:
 
 To improve a11y, I add explicit border to focused state for both label and button.
 
-Using `appearance: none` for radio input; input:checked style gone in Chrome but remained in Firefox.
+Using `appearance: none` for radio input; input:focus style gone in Chrome but remained in Firefox(only when using tab to focus).
+updated: this issue is solved by using `outline: none` thanks to SutonToch
 
 Chrome:  
 ![](./images/input-focus-Chrome.png)  
